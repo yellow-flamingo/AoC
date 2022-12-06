@@ -37,11 +37,9 @@ for row in stacks:
 
 # Follow the instructions to get the final stacks
 for instr in instructions:
-    move_count = 0
     for i in range(instr[0]):
         to_move_1 = part_1_stacks[instr[1]-1].pop()
         to_move_2 = part_2_stacks[instr[1]-1].pop()
-        move_count += 1
         part_1_stacks[instr[2]-1].append(to_move_1)
         part_2_stacks[instr[2]-1].insert(len(part_2_stacks[instr[2]-1])-i, to_move_2)
 
